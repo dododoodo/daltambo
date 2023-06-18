@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/sub2.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+</head>
+
+<body class="scrollbar">
+    <div class="wrap">
+        <div class="borderline">
+            <header>
+                <div id="logo1">
+                    <img src="./img/seye.png" alt="" style="margin-right: 7px;">
+                    <a href="index.html">
+                        <h2>달팽이탐구보고서</h2>
+                    </a>
+                    <img src="./img/sback.png" alt="">
+                </div>
+
+                <!-- 햄버거 바 -->
+                <div class="content-container">
+
+                    <!-- Menu icon -->
+                    <div id="menu-icon-shape">
+                        <div id="menu-icon">
+                            <div id="top"></div>
+                            <div id="middle"></div>
+                            <div id="bottom"></div>
+                        </div>
+                    </div>
+
+                    <!-- Overlay menu -->
+                    <div id="overlay-nav">
+                        <div id="nav-content">
+                            <ul>
+                                <li><a href="index.html">우리는 있지</a></li>
+                                <li><a href="sub1.html">얕보면 안돼</a></li>
+                                <li><a href="sub2.html">밥 먹을 시간이야</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- section -->
+
+            <section id="sec1">
+                <div id="funbox">
+                    <div class="splatted"
+                        style="--hue: 110; --hover-rotate: -10; --active-rotate: -30; --hover-scale: 1.15; --active-scale: 0.75;">
+                        <div class="splatted__image">
+                            <img src="./img/black.jpg" />
+                            <img src="./img/black.jpg" />
+                            <img src="./img/black.jpg" />
+                        </div>
+                    </div>
+                    <div class="splatted"
+                        style="--hue: 10; --hover-rotate: -5; --active-rotate: 10; --hover-scale: 1.2; --active-scale: 0.85;">
+                        <div class="splatted__image">
+                            <img src="./img/white.jpg" />
+                            <img src="./img/white.jpg" />
+                            <img src="./img/white.jpg" />
+                        </div>
+                    </div>
+                    <div class="splatted"
+                        style="--hue: 210; --hover-rotate: 10; --active-rotate: 25; --hover-scale: 1.1; --active-scale: 0.8;">
+                        <div class="splatted__image">
+                            <img src="./img/gold.jpg" />
+                            <img src="./img/gold.jpg" />
+                            <img src="./img/gold.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+                <img src="./img/mal.png" alt="" width="350" style="position: absolute; left: 40%;">
+
+                <h3>달팽이는 과연 어떤 음식을 먹을까요?</h3>
+                
+            </section>
+
+            <div id="container2">
+                <button id="btn-modal">달팽이가 먹을 수 있는 음식</button>
+                <div id="lorem-ipsum"></div>
+            </div>
+            <div id="modal" class="modal-overlay">
+                <div class="modal-window">
+                    <div class="title">
+                        <h2>먹을 수 있어!</h2>
+                    </div>
+                    <div class="close-area">X</div>
+                    <div class="content">
+                        <p>야채 : 상추 ,오이, 당근, 애호박</p> <br>
+                        <p>과일 : 딸기, 수박, 참외, 토마토</p><br>
+                        <p>기타 : 계란껍질, 쌀, 콩, 감나무 잎</p><br><br>
+                        <img src="./img/q4.jpg" alt="" width="180"> <img src="./img/q5.jpg" alt="" width="180">
+                    </div>
+                </div>
+            </div>
+
+            <div id="container21">
+                <button id="btn-modal1">달팽이가 먹으면 안되는 음식</button>
+                <div id="lorem-ipsum1"></div>
+            </div>
+            <div id="modal1" class="modal-overlay1">
+                <div class="modal-window1">
+                    <div class="title1">
+                        <h2>먹으면 안돼!</h2>
+                    </div>
+                    <div class="close-area1">X</div>
+                    <div class="content1">
+                        <p>매운 채소 : 고추, 양파, 생강</p> <br>
+                        <p>향이 강한 것 : 미나리, 깻잎, 향채</p><br>
+                        <p>동물성 지방 : 소금, 커피, 우유</p><br><br>
+                        <img src="./img/q9.jpg" alt="" width="180"> <img src="./img/q8.jpg" alt="" width="180">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <section id="sec3">
+                <h3>사실은 달팽이마다의 선호하는 음식이 다릅니다. <br> <br>
+                    달팽이도 입맛이 있고, 편식도 한다는 사실!</h3>
+            </section>
+        
+            <footer style="margin-top: 760px;">
+                <p>© Copyright Do Yeon Kim. All Rights Reserved</p>
+                <p>Designed by Do Yeon Kim</p>
+            </footer>
+        </div>
+
+        <script>
+
+            const modal = document.getElementById("modal")
+            const btnModal = document.getElementById("btn-modal")
+            btnModal.addEventListener("click", e => {
+                modal.style.display = "flex"
+            })
+
+            const closeBtn = modal.querySelector(".close-area")
+            closeBtn.addEventListener("click", e => {
+                modal.style.display = "none"
+            })
+
+            modal.addEventListener("click", e => {
+                const evTarget = e.target
+                if (evTarget.classList.contains("modal-overlay")) {
+                    modal.style.display = "none"
+                }
+            })
+
+            const modal1 = document.getElementById("modal1")
+            const btnModal1 = document.getElementById("btn-modal1")
+            btnModal.addEventListener("click", e => {
+                modal1.style.display = "flex"
+            })
+
+            const closeBtn1 = modal1.querySelector(".close-area1");
+            closeBtn1.addEventListener("click", e => {
+                modal1.style.display = "none"
+            })
+
+            modal1.addEventListener("click", e => {
+                const evTarget = e.target
+                if (evTarget.classList.contains("modal-overlay1")) {
+                    modal1.style.display = "none"
+                }
+            })
+
+        </script>
+
+</body>
+
+</html>

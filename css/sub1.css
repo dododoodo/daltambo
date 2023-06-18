@@ -1,0 +1,494 @@
+/* -----css----- */
+html {
+    scroll-behavior: smooth;
+}
+
+.scrollbar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #E57C23;
+    /* 스크롤바 색상 */
+    border-radius: 10px;
+    /* 스크롤바 둥근 테두리 */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background: rgba(220, 20, 60, .1);
+    /*스크롤바 뒷 배경 색상*/
+}
+
+@font-face {
+    font-family: 'LOTTERIADDAG';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIADDAG.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUITE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #025464;
+}
+
+.borderline {
+    margin: 10px 10px 10px 10px;
+    padding: 15px 15px 15px 15px;
+    border: 5px solid #E8AA42;
+    height: 178vw;
+    padding-bottom: 250px;
+}
+
+#logo1 {
+    width: 102%;
+    margin-left: -15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    border-bottom: 5px solid #E8AA42;
+
+}
+
+#logo1 h2 {
+    color: #E8AA42;
+    font-size: 3.75rem;
+    font-family: 'LOTTERIADDAG';
+    margin-right: 15px;
+
+}
+
+#logo1 a {
+    text-decoration: none;
+}
+
+/* -----햄버거 바----- */
+
+
+.content-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#title {
+    font-family: 'SUITE';
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    font-family: 'raleway', sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/* Menu icon */
+
+#menu-icon-shape {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 40px;
+    right: 45px;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#menu-icon-shape:hover {
+    background: #F8F1F1;
+}
+
+#menu-icon-shape.active:hover {
+    background: #F8F1F1;
+}
+
+#menu-icon {
+    font-family: 'SUITE';
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#top,
+#middle,
+#bottom {
+    width: 100%;
+    height: 4px;
+    background: #E8AA42;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+#middle {
+    margin: 4px 0;
+}
+
+/* Transform menu icon into close icon */
+
+#top.active {
+    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+    transform: translateY(8px) translateX(0) rotate(45deg);
+}
+
+#middle.active {
+    opacity: 0;
+}
+
+#bottom.active {
+    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+    transform: translateY(-8px) translateX(0) rotate(-45deg);
+}
+
+/* Navigation */
+
+#overlay-nav {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #42424282;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.35s, visibility 0.35s, height 0.6s ease;
+    transition: opacity 0.35s, visibility 0.35s, height 0.6s ease;
+}
+
+
+/* Open navigiation */
+
+#overlay-nav.active {
+    width: 100%;
+    height: 100%;
+    opacity: 100;
+    visibility: visible;
+}
+
+#nav-content {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#nav-content ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#nav-content ul li a {
+    font-family: 'LOTTERIADDAG';
+    width: 100%;
+    padding: 2% 0;
+    display: block;
+    font-weight: 100;
+    font-size: 2em;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+#nav-content ul li a:hover {
+    background: #E8AA42;
+}
+
+/* Work description */
+
+#description {
+    font-family: 'SUITE';
+    width: 100%;
+    padding: 0 60px;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: 'raleway', sans-serif;
+    font-size: 1.75em;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: rgb(255, 255, 255);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 600px) {
+    #title {
+        top: 52px;
+        left: 24px;
+        font-size: 1.75em;
+    }
+
+    #menu-icon-shape {
+        right: 9px;
+    }
+
+    #nav-content ul li a {
+        padding: 6% 0;
+    }
+
+    #description {
+        padding: 0 24px;
+        font-size: 1.5em;
+    }
+}
+
+/* section */
+
+/* img hover effect */
+
+.section-fluid-main {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    width: calc(100% - 40px);
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 20%;
+    max-width: 1140px;
+    padding: 100px 0;
+}
+
+.section-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.section-row:hover .section-col {
+    opacity: 0.1;
+}
+
+.section-col {
+    position: relative;
+    width: 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    transition: opacity 250ms linear;
+}
+
+.section-row .section-col:hover {
+    opacity: 1;
+}
+
+.section {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.section-in {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.section-in img {
+    display: block;
+    width: 50%;
+    height: auto;
+    transition: transform 250ms linear;
+    cursor: pointer;
+}
+
+.section-col:hover .section-in img {
+    transform: scale(1.0) rotate(-4deg);
+}
+
+.hover-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+    pointer-events: none;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    mix-blend-mode: difference;
+}
+
+.hover-text h2 {
+    font-family: 'SUITE';
+    font-weight: 800;
+    font-size: 2vw;
+    line-height: 1;
+    color: #fff;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: transform 250ms linear, opacity 250ms ease;
+}
+
+.section-col:hover+.hover-text h2 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#sec1 {
+    height: 1700px;
+}
+
+#sec1 h3 {
+    font-size: 27px;
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'SUITE';
+    color: #F8F1F1;
+}
+
+#sec1 h4 {
+    width: 102.2%;
+    margin-left: -15px;
+    border-top: #E8AA42 solid 5px;
+    font-size: 40px;
+    margin-top: 120px;
+    padding-top: 80px;
+    text-align: center;
+    font-family: 'LOTTERIADDAG';
+    color: #F8F1F1;
+}
+
+#sec2 h3 {
+    line-height: 50px;
+    font-size: 27px;
+    margin-top: 200px;
+    text-align: center;
+    font-family: 'SUITE';
+    color: #f8f1f189;
+    margin-bottom: 100px;
+}
+
+#sec2 h5 {
+    line-height: 50px;
+    font-size: 27px;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'SUITE';
+    color: #f8f1f189;
+    margin-bottom: 100px;
+}
+
+#sec2 h4 {
+    width: 102.2%;
+    margin-left: -15px;
+    border-top: #E8AA42 solid 5px;
+    font-size: 40px;
+    margin-top: 220px;
+    padding-top: 100px;
+    padding-top: 80px;
+    text-align: center;
+    font-family: 'LOTTERIADDAG';
+    color: #F8F1F1;
+}
+
+#sec2 {
+    text-align: center;
+    width: 102%;
+    margin-left: -15px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 5px double #E8AA42;
+}
+
+
+
+#sec2 h3:hover {
+    color: #F8F1F1;
+    transition: all 0.2s linear;
+}
+
+#sec2 h5:hover {
+    color: #F8F1F1;
+    transition: all 0.2s linear;
+}
+
+span {
+    position: relative;
+    font-weight: bold;
+}
+
+span::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: #E57C23;
+}
+
+h3:hover span::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+/* 푸터 */
+
+
+
+footer {
+    color: #F8F1F1;
+    text-align: center;
+    height: 50px;
+    width: 100%; /* 수정: 너비를 100%로 설정 */
+}
+
+footer p {
+    font-family: 'SUITE';
+    color: #E8AA42;
+    margin-bottom: 10px;
+}
